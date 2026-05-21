@@ -6,102 +6,166 @@
   <title>ТЫ ТОЖЕ НИЧЕГО</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
     body {
       background: #000;
       color: white;
+      font-family: Arial, sans-serif;
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 60px 20px;
+      padding: 40px 20px 80px;
     }
 
     .container {
-      text-align: center;
       width: 100%;
-      max-width: 700px;
+      max-width: 720px;
+      animation: fadeIn 1.2s ease;
     }
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-      letter-spacing: 4px;
-      line-height: 1.1;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+      margin: 0 auto 24px;
+    }
+
+    .photo {
+      width: 100%;
+      border-radius: 18px;
+      margin-bottom: 26px;
+      display: block;
     }
 
     .about {
       color: #b3b3b3;
       font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 35px;
+      line-height: 1.7;
+      text-align: center;
+      margin-bottom: 34px;
       padding: 0 10px;
     }
 
     .video-wrapper {
-      margin-bottom: 35px;
       position: relative;
+      margin-bottom: 36px;
     }
 
     video {
       width: 100%;
-      border-radius: 16px;
+      border-radius: 18px;
       display: block;
     }
 
     .sound-toggle {
       position: absolute;
-      bottom: 18px;
-      right: 18px;
+      right: 14px;
+      bottom: 14px;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 0;
     }
 
     .sound-toggle img {
-      width: 21px;
-      height: 21px;
-      opacity: 0.45;
-      transition: 0.2s;
+      width: 22px;
+      height: 22px;
+      opacity: 0.42;
+      transition: transform 0.2s ease;
     }
 
     .sound-toggle img:hover {
       transform: scale(1.08);
     }
 
+    .section-title {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #666;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .links {
+      margin-bottom: 36px;
+    }
+
     .link {
       display: block;
       text-decoration: none;
       color: white;
-      border: 1px solid white;
+      border: 1px solid #2a2a2a;
+      background: rgba(255,255,255,0.03);
       padding: 16px;
-      margin-bottom: 16px;
-      transition: 0.2s;
-      border-radius: 12px;
-      font-size: 18px;
+      margin-bottom: 14px;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 15px;
+      transition: all 0.22s ease;
+      backdrop-filter: blur(4px);
     }
 
     .link:hover {
-      background: white;
+      transform: translateY(-2px);
+      border-color: #fbe530;
+      color: #fbe530;
+      background: rgba(251,229,48,0.06);
+    }
+
+    .donate {
+      border-color: #fbe530;
+      color: #fbe530;
+    }
+
+    .donate:hover {
+      background: #fbe530;
       color: black;
-      transform: scale(1.03);
     }
 
     .mail {
-      margin-top: 30px;
+      text-align: center;
       color: #666;
-      font-size: 14px;
+      font-size: 13px;
+      margin-top: 10px;
     }
 
     .mail a {
       color: white;
       text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 24px 14px 60px;
+      }
+
+      .about {
+        font-size: 14px;
+      }
+
+      .link {
+        padding: 15px;
+        font-size: 14px;
+      }
+
     }
 
   </style>
@@ -111,7 +175,9 @@
 
   <div class="container">
 
-    <h1>ТЫ ТОЖЕ НИЧЕГО</h1>
+    <img src="logo.png" class="logo">
+
+    <img src="photo.png" class="photo">
 
     <p class="about">
       отморозки из рязани играющие шумный и грязный околопанк
@@ -137,28 +203,72 @@
 
     </div>
 
-    <a class="link" href="https://band.link/uroktoo" target="_blank">
-      BANDLINK
-    </a>
+    <div class="section-title">
+      СЛУШАТЬ
+    </div>
 
-    <a class="link" href="https://vk.com/uroktoo" target="_blank">
-      VK
-    </a>
+    <div class="links">
 
-    <a class="link" href="https://www.instagram.com/ur0kt00/" target="_blank">
-      INSTAGRAM
-    </a>
+      <a class="link" href="https://band.link/uroktoo" target="_blank">
+        BANDLINK
+      </a>
 
-    <a class="link" href="https://www.youtube.com/@uroktoo" target="_blank">
-      YOUTUBE
-    </a>
+      <a class="link" href="https://open.spotify.com/artist/1QAreX9XAa4XdKZImfgkHW?si=QrYrJvqiTT6lZwYg9zd45Q" target="_blank">
+        SPOTIFY
+      </a>
 
-    <a class="link" href="https://www.tiktok.com/@uroktoo" target="_blank">
-      TIKTOK
-    </a>
+      <a class="link" href="https://music.yandex.ru/artist/21881902" target="_blank">
+        ЯНДЕКС МУЗЫКА
+      </a>
 
-    <a class="link" href="https://t.me/uroktoo" target="_blank">
-      TELEGRAM
+      <a class="link" href="https://music.apple.com/ru/artist/ты-тоже-ничего/1737694907" target="_blank">
+        APPLE MUSIC
+      </a>
+
+      <a class="link" href="https://vk.com/artist/tytozhenichego" target="_blank">
+        VK MUSIC
+      </a>
+
+    </div>
+
+    <div class="section-title">
+      СОЦСЕТИ
+    </div>
+
+    <div class="links">
+
+      <a class="link" href="https://vk.com/uroktoo" target="_blank">
+        VK
+      </a>
+
+      <a class="link" href="https://www.instagram.com/ur0kt00/" target="_blank">
+        INSTAGRAM
+      </a>
+
+      <a class="link" href="https://www.youtube.com/@uroktoo" target="_blank">
+        YOUTUBE
+      </a>
+
+      <a class="link" href="https://www.tiktok.com/@uroktoo" target="_blank">
+        TIKTOK
+      </a>
+
+      <a class="link" href="https://t.me/uroktoo" target="_blank">
+        TELEGRAM
+      </a>
+
+    </div>
+
+    <div class="section-title">
+      ПОДДЕРЖАТЬ
+    </div>
+
+    <a
+      class="link donate"
+      href="https://tips.yandex.ru/guest/payment/3224150?wl=yandex_music_dark"
+      target="_blank"
+    >
+      ДАТЬ ДЕНЕГ
     </a>
 
     <p class="mail">
@@ -171,10 +281,12 @@
   </div>
 
   <script>
+
     const video = document.getElementById("bandVideo");
     const soundIcon = document.getElementById("soundIcon");
 
     function toggleSound() {
+
       video.muted = !video.muted;
 
       if (video.muted) {
@@ -182,7 +294,9 @@
       } else {
         soundIcon.src = "sound-on.png";
       }
+
     }
+
   </script>
 
 </body>
