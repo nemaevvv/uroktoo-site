@@ -13,145 +13,178 @@
       font-family: Arial, sans-serif;
     }
 
-body {
-  background: #000;
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 60px 20px;
-}
+    body {
+      background: #000;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 60px 20px;
+    }
 
     .container {
       text-align: center;
       width: 100%;
-      max-width: 400px;
-      padding: 20px;
+      max-width: 700px;
     }
 
     h1 {
-      font-size: 52px;
-      margin-bottom: 40px;
-      letter-spacing: 8px;
+      font-size: 42px;
+      margin-bottom: 20px;
+      letter-spacing: 4px;
+      line-height: 1.1;
     }
-    h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-  letter-spacing: 4px;
-  line-height: 1.1;
-}
 
-.about {
-color: #b3b3b3;
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 35px;
-  padding: 0 10px;
-}
+    .about {
+      color: #b3b3b3;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 35px;
+      padding: 0 10px;
+    }
 
-.video-wrapper {
-  margin-bottom: 35px;
-}
+    .video-wrapper {
+      margin-bottom: 35px;
+      position: relative;
+    }
 
-video {
-  width: 100%;
-  border-radius: 16px;
-  display: block;
-}
+    video {
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+    }
 
-.video-wrapper {
-  margin-bottom: 35px;
-  position: relative;
-}
+    .sound-toggle {
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
 
-.sound-toggle {
-  position: absolute;
-  bottom: 18px;
-  right: 18px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
+    .sound-toggle img {
+      width: 21px;
+      height: 21px;
+      opacity: 0.45;
+      transition: 0.2s;
+    }
 
-.sound-toggle img {
-  width: 21px;
-  height: 21px;
-  opacity: 0.45;
-  transition: 0.2s;
-}
+    .sound-toggle img:hover {
+      opacity: 1;
+      transform: scale(1.08);
+    }
 
-.sound-toggle img:hover {
-  opacity: 1;
-  transform: scale(1.08);
-}
+    .link {
+      display: block;
+      text-decoration: none;
+      color: white;
+      border: 1px solid white;
+      padding: 16px;
+      margin-bottom: 16px;
+      transition: 0.2s;
+      border-radius: 12px;
+      font-size: 18px;
+    }
+
+    .link:hover {
+      background: white;
+      color: black;
+      transform: scale(1.03);
+    }
+
+    .mail {
+      margin-top: 30px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .mail a {
+      color: white;
+      text-decoration: none;
+    }
+
   </style>
 </head>
+
 <body>
 
- <div class="video-wrapper">
+  <div class="container">
 
-  <video
-    id="bandVideo"
-    autoplay
-    muted
-    loop
-    playsinline
-  >
-    <source src="video.mp4" type="video/mp4">
-  </video>
+    <h1>ТЫ ТОЖЕ НИЧЕГО</h1>
 
-  <button class="sound-toggle" onclick="toggleSound()">
-    <img id="soundIcon" src="sound-off.png" alt="sound">
-  </button>
+    <p class="about">
+      отморозки из рязани играющие шумный и грязный околопанк
+      про алкоголь, любовь и ярость,
+      без попыток казаться приличнее
+    </p>
 
-</div>
+    <div class="video-wrapper">
 
-<a class="link" href="https://band.link/uroktoo" target="_blank">
-  BANDLINK
-</a>
+      <video
+        id="bandVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="video.mp4" type="video/mp4">
+      </video>
 
-<a class="link" href="https://vk.com/uroktoo" target="_blank">
-  VK
-</a>
+      <button class="sound-toggle" onclick="toggleSound()">
+        <img id="soundIcon" src="sound-off.png" alt="sound">
+      </button>
 
-<a class="link" href="https://www.instagram.com/ur0kt00/" target="_blank">
-  INSTAGRAM
-</a>
+    </div>
 
-<a class="link" href="https://www.youtube.com/@uroktoo" target="_blank">
-  YOUTUBE
-</a>
+    <a class="link" href="https://band.link/uroktoo" target="_blank">
+      BANDLINK
+    </a>
 
-<a class="link" href="https://www.tiktok.com/@uroktoo" target="_blank">
-  TIKTOK
-</a>
+    <a class="link" href="https://vk.com/uroktoo" target="_blank">
+      VK
+    </a>
 
-<a class="link" href="https://t.me/uroktoo" target="_blank">
-  TELEGRAM
-</a>
+    <a class="link" href="https://www.instagram.com/ur0kt00/" target="_blank">
+      INSTAGRAM
+    </a>
 
-<p style="margin-top: 30px; color: #666; font-size: 14px;">
-  связь:
-  <a href="mailto:m.evpraxin@ya.ru" style="color:white;">
-    m.evpraxin@ya.ru
-  </a>
-</p>
+    <a class="link" href="https://www.youtube.com/@uroktoo" target="_blank">
+      YOUTUBE
+    </a>
+
+    <a class="link" href="https://www.tiktok.com/@uroktoo" target="_blank">
+      TIKTOK
+    </a>
+
+    <a class="link" href="https://t.me/uroktoo" target="_blank">
+      TELEGRAM
+    </a>
+
+    <p class="mail">
+      связь:
+      <a href="mailto:m.evpraxin@ya.ru">
+        m.evpraxin@ya.ru
+      </a>
+    </p>
 
   </div>
-<script>
-  const video = document.getElementById("bandVideo");
-  const soundIcon = document.getElementById("soundIcon");
 
-  function toggleSound() {
-    video.muted = !video.muted;
+  <script>
+    const video = document.getElementById("bandVideo");
+    const soundIcon = document.getElementById("soundIcon");
 
-    if (video.muted) {
-      soundIcon.src = "sound-off.png";
-    } else {
-      soundIcon.src = "sound-on.png";
+    function toggleSound() {
+      video.muted = !video.muted;
+
+      if (video.muted) {
+        soundIcon.src = "sound-off.png";
+      } else {
+        soundIcon.src = "sound-on.png";
+      }
     }
-  }
-</script>
+  </script>
+
 </body>
 </html>
