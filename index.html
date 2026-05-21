@@ -15,6 +15,8 @@
 
     body {
       background: #000;
+      background-image:
+        radial-gradient(circle at top, rgba(251,229,48,0.06), transparent 35%);
       color: white;
       font-family: Arial, sans-serif;
       min-height: 100vh;
@@ -25,11 +27,13 @@
 
     .container {
       width: 100%;
-      max-width: 720px;
+      max-width: 540px;
       animation: fadeIn 1.2s ease;
+      animation-fill-mode: both;
     }
 
     @keyframes fadeIn {
+
       from {
         opacity: 0;
         transform: translateY(10px);
@@ -39,26 +43,29 @@
         opacity: 1;
         transform: translateY(0);
       }
+
     }
 
     .logo {
       width: 100%;
       max-width: 420px;
       display: block;
-      margin: 0 auto 24px;
+      margin: 0 auto 28px;
+
+      filter:
+        drop-shadow(0 0 18px rgba(251,229,48,0.08));
+
+      transition: 0.4s ease;
     }
 
-    .photo {
-      width: 100%;
-      border-radius: 18px;
-      margin-bottom: 26px;
-      display: block;
+    .logo:hover {
+      transform: scale(1.015);
     }
 
     .about {
       color: #b3b3b3;
       font-size: 15px;
-      line-height: 1.7;
+      line-height: 1.75;
       text-align: center;
       margin-bottom: 34px;
       padding: 0 10px;
@@ -66,13 +73,16 @@
 
     .video-wrapper {
       position: relative;
-      margin-bottom: 36px;
+      margin-bottom: 42px;
     }
 
     video {
       width: 100%;
       border-radius: 18px;
       display: block;
+
+      box-shadow:
+        0 0 40px rgba(0,0,0,0.55);
     }
 
     .sound-toggle {
@@ -104,28 +114,36 @@
     }
 
     .links {
-      margin-bottom: 36px;
+      margin-bottom: 38px;
     }
 
     .link {
       display: block;
       text-decoration: none;
       color: white;
-      border: 1px solid #2a2a2a;
-      background: rgba(255,255,255,0.03);
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      background: rgba(255,255,255,0.025);
+
       padding: 16px;
       margin-bottom: 14px;
       border-radius: 14px;
+
       text-align: center;
       font-size: 15px;
+
       transition: all 0.22s ease;
+
       backdrop-filter: blur(4px);
     }
 
     .link:hover {
       transform: translateY(-2px);
+
       border-color: #fbe530;
       color: #fbe530;
+
       background: rgba(251,229,48,0.06);
     }
 
@@ -139,11 +157,37 @@
       color: black;
     }
 
+    .bottom-photo-wrapper {
+      margin-top: 52px;
+      margin-bottom: 36px;
+    }
+
+    .photo {
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+
+      filter:
+        brightness(1.12)
+        contrast(1.04)
+        saturate(1.02);
+
+      opacity: 0.92;
+
+      transition: 0.35s ease;
+    }
+
+    .photo:hover {
+      opacity: 1;
+      transform: scale(1.01);
+    }
+
     .mail {
       text-align: center;
       color: #666;
       font-size: 13px;
       margin-top: 10px;
+      line-height: 1.7;
     }
 
     .mail a {
@@ -155,6 +199,10 @@
 
       body {
         padding: 24px 14px 60px;
+      }
+
+      .logo {
+        margin-bottom: 24px;
       }
 
       .about {
@@ -176,8 +224,6 @@
   <div class="container">
 
     <img src="logo.png" class="logo">
-
-    <img src="photo.png" class="photo">
 
     <p class="about">
       отморозки из рязани играющие шумный и грязный околопанк
@@ -270,6 +316,12 @@
     >
       ДАТЬ ДЕНЕГ
     </a>
+
+    <div class="bottom-photo-wrapper">
+
+      <img src="photo.png" class="photo">
+
+    </div>
 
     <p class="mail">
       связь:
