@@ -13,14 +13,14 @@
       font-family: Arial, sans-serif;
     }
 
-    body {
-      background: #000;
-      color: white;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+body {
+  background: #000;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
 
     .container {
       text-align: center;
@@ -59,40 +59,32 @@ video {
   display: block;
 }
 
-.sound-btn {
-  margin-top: 12px;
+.video-wrapper {
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.sound-toggle {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
   background: none;
-  border: 1px solid white;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 12px;
+  border: none;
   cursor: pointer;
-  font-size: 14px;
+  padding: 0;
+}
+
+.sound-toggle img {
+  width: 42px;
+  height: 42px;
+  opacity: 0.9;
   transition: 0.2s;
 }
 
-.sound-btn:hover {
-  background: white;
-  color: black;
+.sound-toggle img:hover {
+  opacity: 1;
+  transform: scale(1.08);
 }
-
-    .link {
-      display: block;
-      text-decoration: none;
-      color: white;
-      border: 1px solid white;
-      padding: 16px;
-      margin-bottom: 16px;
-      transition: 0.2s;
-      border-radius: 12px;
-      font-size: 18px;
-    }
-
-    .link:hover {
-      background: white;
-      color: black;
-      transform: scale(1.03);
-    }
   </style>
 </head>
 <body>
@@ -107,6 +99,8 @@ video {
     </p>
     <div class="video-wrapper">
 
+<div class="video-wrapper">
+
   <video
     id="bandVideo"
     autoplay
@@ -117,11 +111,15 @@ video {
     <source src="video.mp4" type="video/mp4">
   </video>
 
-  <button class="sound-btn" onclick="toggleSound()">
-    ВКЛЮЧИТЬ ЗВУК
+  <button class="sound-toggle" onclick="toggleSound()">
+    <img id="soundIcon" src="sound-off.png" alt="sound">
   </button>
 
 </div>
+
+<a class="link" href="https://band.link/uroktoo" target="_blank">
+  BANDLINK
+</a>
 
     <a class="link" href="https://vk.com/uroktoo" target="_blank">VK</a>
 
@@ -150,15 +148,15 @@ video {
   </div>
 <script>
   const video = document.getElementById("bandVideo");
-  const button = document.querySelector(".sound-btn");
+  const soundIcon = document.getElementById("soundIcon");
 
   function toggleSound() {
     video.muted = !video.muted;
 
     if (video.muted) {
-      button.innerText = "ВКЛЮЧИТЬ ЗВУК";
+      soundIcon.src = "sound-off.png";
     } else {
-      button.innerText = "ВЫКЛЮЧИТЬ ЗВУК";
+      soundIcon.src = "sound-on.png";
     }
   }
 </script>
