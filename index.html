@@ -42,11 +42,38 @@
 }
 
 .about {
-  color: #b3b3b3;
+color: #b3b3b3;
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 35px;
   padding: 0 10px;
+}
+
+.video-wrapper {
+  margin-bottom: 35px;
+}
+
+video {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+
+.sound-btn {
+  margin-top: 12px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.sound-btn:hover {
+  background: white;
+  color: black;
 }
 
     .link {
@@ -78,6 +105,23 @@
       про алкоголь, любовь и ярость,
       без попыток казаться приличнее
     </p>
+    <div class="video-wrapper">
+
+  <video
+    id="bandVideo"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <button class="sound-btn" onclick="toggleSound()">
+    ВКЛЮЧИТЬ ЗВУК
+  </button>
+
+</div>
 
     <a class="link" href="https://vk.com/uroktoo" target="_blank">VK</a>
 
@@ -104,6 +148,19 @@
 </p>
 
   </div>
+<script>
+  const video = document.getElementById("bandVideo");
+  const button = document.querySelector(".sound-btn");
 
+  function toggleSound() {
+    video.muted = !video.muted;
+
+    if (video.muted) {
+      button.innerText = "ВКЛЮЧИТЬ ЗВУК";
+    } else {
+      button.innerText = "ВЫКЛЮЧИТЬ ЗВУК";
+    }
+  }
+</script>
 </body>
 </html>
