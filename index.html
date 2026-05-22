@@ -545,7 +545,7 @@
 
 const galleryItems = document.querySelectorAll(".gallery-image-wrapper");
 
-window.addEventListener("scroll", () => {
+function animateTitles() {
 
   galleryItems.forEach(item => {
 
@@ -555,18 +555,21 @@ window.addEventListener("scroll", () => {
 
     const windowHeight = window.innerHeight;
 
-    const centerOffset =
+    const progress =
       (rect.top + rect.height / 2 - windowHeight / 2);
 
-    const move =
-      centerOffset * -0.22;
+    const move = progress * -0.38;
 
     title.style.transform =
       `translate(-50%, calc(-50% + ${move}px))`;
 
   });
 
-});
+  requestAnimationFrame(animateTitles);
+
+}
+
+animateTitles();
 
   </script>
 
